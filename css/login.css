@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@charset "UTF-8";
+/* CSS Document */
+
+body { background:#ffffff; font-size:16px;  font-family: 'Open Sans Condensed', sans-serif;}
+*:focus {
+    outline: 0;
+}
+h1{
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:#D8444A;
+	font-weight:100;
+	text-align:center;
+}
+.homeBtn {
+    padding: 1em;
+    background: rgba(255, 255, 255, 1);
+    min-width: 1em;
+    display: block;
+    position: absolute;
+    bottom: 1em;
+    left: 40%;
+    border-radius: 5px;
+    font-family: 'century gothic';
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #b33c3c;
+    cursor: pointer;
+}
+
+.login {
+    background: #fff;
+    position: relative;
+    display: none;
+    z-index: 1000;
+	border-radius: 50px 50px 50px 50px;
+	border:1px solid #CCC;
+	width:20em;
+	height:20em;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-10em 0 0 -10em;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+
+.login form input {
+	border:none;
+	height:40px;
+	max-width:90%;
+	font-size:20px;  font-family: 'Open Sans Condensed', sans-serif;
+	font-weight:100;
+}
+.user{
+	width:90%;
+}
+.pass{
+	width:80%;
+
+}
+
+hr.fancy-line { 
+	width:80%;
+    border: 0; 
+    height: 1px;
+
+}
+hr.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.fancy-line:after {
+    content:'';
+    height: 0.5em;
+    top: 1px;
+}
+
+hr.fancy-line:before, hr.fancy-line:after {
+    content: '';
+    position: relative;
+    width: 80%;
+}
+
+hr.fancy-line, hr.fancy-line:before {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+body, hr.fancy-line:after {
+    background: #f4f4f4;
+}
+
+
+#enter {
+   background-image: url('../images/enter.png');
+   height: 26px;
+   width: 26px;
+}
+
+#enter:hover {
+   background-image: url('../images/enter-fo.png');
+}
+
+
+.right-column{
+	width:45%;
+	position:relative;
+	margin-left:50%;
+}
+.left-column{
+	width:45%;
+	position:relative;
+	float:left;
+}
+.mallow{
+	width:100%; 
+	max-width:450px
+}
+.mallow2{
+	width:100%; 
+	max-width:400px
+}
+
+@media all and (max-width: 1100px) {
+h1{
+	font-size:25px;
+}	
+.mallow{
+	width:100%; 
+	max-width:350px
+}
+.mallow2{
+	width:100%; 
+	max-width:300px
+}
+}
+
+@media all and (max-width: 1000px) {
+	h1{
+	font-size:30px;
+}
+.mallow{
+	width:100%; 
+	max-width:3205x
+}
+.mallow2{
+	width:100%; 
+	max-width:275px
+}
+.right-column{
+	width:100%;
+	position:relative;
+	margin-left:0;
+}
+
+.left-column{
+	width:100%;
+	position:relative;
+	float:none;
+	margin-left:0;
+}
+}/* CSS Document */
+

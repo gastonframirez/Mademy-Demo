@@ -1,0 +1,597 @@
+﻿<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Inglés 1º Año &quot;A&quot;</title>
+
+    <!--
+NOTA: la pagina esta diseñada para mostrarse en una MACBOOK PRO 13", por cuestiones de tiempo. Empezamos a hacer responsive design, pero no alcanzamos a terminar.
+!-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link href="css/fontello.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/layout.css" rel="stylesheet" type="text/css">-->
+    <link href="css/fontello.css" rel="stylesheet" type="text/css">
+    <link href="css/clndr.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Aprobado con nota mayor a 8',     3],
+          ['Aprobado con nota mayor a 6',      8],
+          ['Desaprobado',  4],
+                ]);
+
+        var options = {
+          colors: ['#4cd964', '#ffcc00', '#ff2215'],
+          pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+</script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Aprobado con nota mayor a 8',     2],
+          ['Aprobado con nota mayor a 6',      9],
+          ['Desaprobado',  4],
+                ]);
+
+        var options = {
+          title: 'CONDICIÓN DEL CURSO',
+          colors: ['#4cd964', '#ffcc00', '#ff2215'],
+          pieHole: 0.4
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Temas', 'Actividad 1', 'Actividad 2' ,'Actividad 3'],
+          ['Tema 1',  6,      4		, 7],
+          ['Tema 2',  9,      7		, 4],
+          ['Tema 3',  4,      8		, 7]
+         ]);
+
+        var options = {
+          title: 'PROMEDIOS ACTIVIDADES',
+          hAxis: {title: 'Primer Trimestre', titleTextStyle: {color: '#ff3e2e'}},
+          vAxis: {title: 'Notas', titleTextStyle: {color: '#ff3e2e' }},
+          colors: ['#006ee3', '#d81b3a', '#4cd964']
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    </head>
+
+    <body>
+<header id="header" class="transparent header-shrink">
+      <div class="header-in"> <a class="navbar-brand" href="home.html"><img src="images/logo-mini.png" width="70" height="50"></a>
+    <nav id="navigation">
+          <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+              <li class="divider-vertical"></li>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/subjects/english.png" width="25" height="25" style="margin-bottom:-7px;"> Inglés 1º Año "A"<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                  <li><a href="#"><img src="images/subjects/english.png" width="25" height="25" style="margin-bottom:-7px; margin-right:5px;">Ingles 2º Año "B"</a></li>
+                  <li><a href="#"><img src="images/subjects/history.png" width="25" height="25" style="margin-bottom:-7px; margin-right:5px;">Historia 3º Año "B" </a></li>
+                </ul>
+          </li>
+            </ul>
+        <a id="responsive-nav-button" class="responsive-nav-button" href="#"></a> </div>
+        </nav>
+    <nav id="navigation"  style="text-transform:uppercase; font-size:14px;">
+          <div class="collapse navbar-collapse ">
+        <ul class="nav navbar-nav navbar-right">
+              <li class="current-menu-item"><a href="home.html">Home</a></li>
+              <li><a href="#header"><i class="icon-mail-1"></i></a></li>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height:70px; vertical-align:middle"><i class="icon-flag"></i></a>
+            <ul class="dropdown-menu" id="notificaciones">
+                  <li><a href="#">
+                    <table>
+                    <tr>
+                        <td><img src="images/people/carmen.png" height="50px" style="vertical-align:middle;  margin-right:10px"/></td>
+                        <td style="vertical-align:top"><strong>Miss Carmen</strong> ha subido
+                        <div style="height:1px; margin-top:-10px"></div>
+                        una nueva Actividad
+                        <div style="height:-1px;margin-top:-10px"></div>
+                        <span style="font-size:10px; color:#999; vertical-align:top; margin-top:-50px;">Hace 10 seg.</span></td>
+                      </tr>
+                  </table>
+                    </a></li>
+                  <li><a href="#">
+                    <table>
+                    <tr>
+                        <td><img src="images/history/prueba.jpg" height="50px" style="vertical-align:middle;  margin-right:10px"/></td>
+                        <td style="vertical-align:top">Se ha subido la nota de
+                        <div style="height:1px; margin-top:-10px"></div>
+                        <strong>Matemática</strong> Prueba Nº2: <strong>10</strong>
+                        <div style="height:-1px;margin-top:-10px"></div>
+                        <span style="font-size:10px; color:#999; vertical-align:top; margin-top:-50px;">Hace 1 hora</span></td>
+                      </tr>
+                  </table>
+                    </a></li>
+                  <li><a href="#">
+                    <table>
+                    <tr>
+                        <td><img src="images/people/fred.png" height="50px" style="vertical-align:middle;  margin-right:10px"/></td>
+                        <td style="vertical-align:top"><strong>Prof. Federico</strong> ha subido
+                        <div style="height:1px; margin-top:-10px"></div>
+                        un nuevo <strong>Juego</strong>
+                        <div style="height:-1px;margin-top:-10px"></div>
+                        <span style="font-size:10px; color:#999; vertical-align:top; margin-top:-50px;">Hace 3 horas</span></td>
+                      </tr>
+                  </table>
+                    </a></li>
+                </ul>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height:70px; vertical-align:middle">Miss Jime <img src="images/1.png" height="50px" style="vertical-align:middle"/></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="icon-user"></i>Perfil</a></li>
+              <li><a href="#"><i class="icon-graduation-cap"></i> Situación Académica</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="icon-power"></i> Salir</a></li>
+            </ul>
+          </li>
+            </ul>
+      </div>
+          <!-- /.navbar-collapse --> 
+        </nav>
+    <!--/ #navigation--> 
+  </div>
+      <!--/ .header-in--> 
+      
+    </header>
+<!--/ #header--> 
+
+<!-- Cntent -->
+
+<div id="wrapper">
+      <section id="home" style="margin-top:100px;">
+    <div class="subject-nav" >
+          <ul  id="tabs" class="nav nav-pills" data-tabs="tabs">
+        <li class="active"><a href="#act" role="tab"  data-toggle="tab">Actividades</a></li>
+        <li ><a href="#course"  role="tab"  data-toggle="tab">Curso</a></li>
+        <li><a href="#program" role="tab"  data-toggle="tab">Programa</a></li>
+        <li><a href="#" role="tab"  data-toggle="tab">Calendario</a></li>
+      </ul>
+        </div>
+    <div class="content-container">
+          <div id="tab-content" class="tab-content">
+        <div class="tab-pane active" id="act">
+              <div class="col-md-3 fix-height">
+            <div class="panel-group" id="accordion"> <br/>
+                  <div class="panel activities">
+                <div class="activities panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> Trimestre 1 </a> </h4>
+                    </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body" style="background-color:#fff;">
+                    <div class="list-group" style="width:100%; text-transform:capitalize"> <a href="#" class="list-group-item" style=" width:120%; margin-top:-15px; margin-left:-20px; color:#333;"> Tema 1: "Present Simple and Continuous" </a> <a href="#" class="list-group-item"  style="width:120%; margin-left:-20px; color:#333; ">Tema 2: "Family and Sports vocabulary"</a> <a href="#" class="list-group-item disabled"  style="width:120%; margin-left:-20px; margin-bottom:-10px; color:#333;background-color:#eee;">Tema 3: "Future"</a> </div>
+                  </div>
+                    </div>
+              </div>
+                  <div class="panel activities">
+                <div class="activities panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> Trimestre 2 </a> </h4>
+                    </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body" style="background-color:#fff;">
+                    <div class="list-group" style="width:100%; text-transform:capitalize""> <a href="#" class="list-group-item " style=" width:120%; margin-top:-15px; margin-left:-20px; color:#333;"> Tema 4 </a> <a href="#" class="list-group-item"  style="width:120%; margin-left:-20px; color:#333;">Tema 5</a> <a href="#" class="list-group-item"  style="width:120%; margin-left:-20px; margin-bottom:-10px; color:#333;">Tema 6</a> </div>
+                  </div>
+                    </div>
+              </div>
+                  <div class="panel activities">
+                <div class="activities panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Trimestre 3 </a> </h4>
+                    </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body" style="background-color:#fff;">
+                    <div class="list-group" style="width:100%; text-transform:capitalize""> <a href="#" class="list-group-item " style=" width:120%; margin-top:-15px; margin-left:-20px; color:#333;"> Tema 7 </a> <a href="#" class="list-group-item"  style="width:120%; margin-left:-20px; color:#333;">Tema 8</a> <a href="#" class="list-group-item"  style="width:120%; margin-left:-20px; margin-bottom:-10px; color:#333;">Tema 9</a> </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+              <!-- fix-height -->
+              <div class="col-md-9 fix-height-right">
+            <nav class="navbar navbar-inverse" role="navigation" style="margin-top: 10px; width:80%; margin-left:auto; margin-right:auto; font-size:24px;">
+                  <ul class="nav navbar-nav">
+                <li><span>
+                  <div style="margin-right:20px;"><a></a></div>
+                  </span></li>
+                <li><span>
+                  <div style="margin-right:100px;"></div>
+                  <a href="#header"><i class="icon-pencil-2"></i></a></span></li>
+                <li><span>
+                  <div style="margin-right:100px;"></div>
+                  <a href="#header" data-toggle="tooltip" title="first tooltip"><i class="icon-gamepad"></i></a></span></li>
+                <li class="active"><span>
+                  <div style="margin-right:100px;"></div>
+                  <a href="#header"><i class="icon-list-3" style="color:#CF7576"></i></a></span></li>
+                <li><span>
+                  <div style="margin-right:50px;"></div>
+                  <a href="#header" data-toggle="tooltip" title="first tooltip"><i class="icon-book-3"></i></a></span></li>
+                <li><span>
+                  <div style="margin-left:100px; font-size:24px;"><a data-toggle="modal" href="#myModal"><span style="font-size:14px;">Crear Actividad</span><i class="glyphicon icon-plus-circle-1"></i></a></div>
+                  </span></li>
+                <div class="modal" id="myModal">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+                          <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Selecciona la actividad:</h4>
+                      </div>
+                          <div class="container"></div>
+                          <div class="modal-body" style="font-size:16px">
+                        <div class="list-group"> <a href="#" class="list-group-item" style="height:90px;">
+                          <div class="col-lg-2"><img src="images/activities/essay1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Ensayo</strong></h4>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:90px;">
+                          <div class="col-lg-2"><img src="images/activities/multiple1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Multiple-Choice</strong></h4>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:90px;">
+                          <div class="col-lg-2"><img src="images/activities/question1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Cuestionario</strong></h4>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:90px;">
+                          <div class="col-lg-2"><img src="images/activities/hw1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Tarea</strong></h4>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:90px;">
+                          <div class="col-lg-2"><img src="images/activities/tp1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Trabajo Práctico</strong></h4>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:90px;"  data-dismiss="modal" data-targer="myModal" data-toggle="modal" data-target="#myModal2">
+                          <div class="col-lg-2"><img src="images/activities/games1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juegos Educativos</strong></h4>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:90px;">
+                          <div class="col-lg-2"><img src="images/activities/test1.png"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Examen</strong></h4>
+                          </div>
+                          </a> </div>
+                      </div>
+                          <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn btn-default">Cerrar</a> </div>
+                        </div>
+                  </div>
+                    </div>
+                <div class="modal" id="myModal2" data-backdrop="static">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+                          <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Selecciona un juego:</h4>
+                      </div>
+                          <div class="container"></div>
+                          <div class="modal-body" style="font-size:16px;">
+                        <div class="list-group"> <a href="#" class="list-group-item" style="height:130px;">
+                          <div class="col-lg-3"><img src="images/games/game1.png" height="90"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juego 1</strong></h4>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="a" checked>
+                              Tema 1<br>
+                              <input type="checkbox" name="res" value="b" >
+                              Tema 2<br>
+                              <input type="checkbox" name="res" value="c" >
+                              Tema 3 </div>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="d" >
+                              Tema 4<br>
+                              <input type="checkbox" name="res" value="e" >
+                              Tema 5<br>
+                            </div>
+                            <div class="col-lg-4">
+                              <div data-dismiss="modal" class="btn btn-success">Crear</div>
+                            </div>
+                          </div>
+                          </a> <a href="https://www.youtube.com/watch?v=6WywudNU0U0"class="list-group-item" target="_blank" style="height:130px;">
+                          <div class="col-lg-3"><img src="images/games/game7.png" height="90"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juego 2</strong></h4>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="a" checked>
+                              Tema 1<br>
+                              <input type="checkbox" name="res" value="b" >
+                              Tema 2<br>
+                              <input type="checkbox" name="res" value="c" >
+                              Tema 3 </div>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="d" >
+                              Tema 4<br>
+                              <input type="checkbox" name="res" value="e" >
+                              Tema 5<br>
+                            </div>
+                            <div class="col-lg-4">
+                              <div data-dismiss="modal" data-targer="myModal2" data-toggle="modal" data-target="#myModal3"  class="btn btn-success">Crear</div>
+                            </div>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:130px;">
+                          <div class="col-lg-3"><img src="images/games/game3.png" height="90"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juego 3</strong></h4>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="a" checked>
+                              Tema 1<br>
+                              <input type="checkbox" name="res" value="b" >
+                              Tema 2<br>
+                              <input type="checkbox" name="res" value="c" >
+                              Tema 3 </div>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="d" >
+                              Tema 4<br>
+                              <input type="checkbox" name="res" value="e" >
+                              Tema 5<br>
+                            </div>
+                            <div class="col-lg-4">
+                              <div data-dismiss="modal" data-targer="myModal2" data-toggle="modal" data-target="#myModal3" class="btn btn-success">Crear</div>
+                            </div>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:130px;">
+                          <div class="col-lg-3"><img src="images/games/game4.png" height="90"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juego 4</strong></h4>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="a" checked>
+                              Tema 1<br>
+                              <input type="checkbox" name="res" value="b" >
+                              Tema 2<br>
+                              <input type="checkbox" name="res" value="c" >
+                              Tema 3 </div>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="d" >
+                              Tema 4<br>
+                              <input type="checkbox" name="res" value="e" >
+                              Tema 5<br>
+                            </div>
+                            <div class="col-lg-4">
+                              <div data-dismiss="modal" class="btn btn-success">Crear</div>
+                            </div>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:130px;">
+                          <div class="col-lg-3"><img src="images/games/game5.png" height="90"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juego 5</strong></h4>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="a" checked>
+                              Tema 1<br>
+                              <input type="checkbox" name="res" value="b" >
+                              Tema 2<br>
+                              <input type="checkbox" name="res" value="c" >
+                              Tema 3 </div>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="d" >
+                              Tema 4<br>
+                              <input type="checkbox" name="res" value="e" >
+                              Tema 5<br>
+                            </div>
+                            <div class="col-lg-4">
+                              <div data-dismiss="modal" class="btn btn-success">Crear</div>
+                            </div>
+                          </div>
+                          </a> <a href="#" class="list-group-item" style="height:130px;">
+                          <div class="col-lg-3"><img src="images/games/game6.png" height="90"/></div>
+                          <div class="col-lg-8">
+                            <h4 class="list-group-item-heading"><strong>Juego 6</strong></h4>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="a" checked>
+                              Tema 1<br>
+                              <input type="checkbox" name="res" value="b" >
+                              Tema 2<br>
+                              <input type="checkbox" name="res" value="c" >
+                              Tema 3 </div>
+                            <div class="col-lg-4">
+                              <input type="checkbox" name="res" value="d" >
+                              Tema 4<br>
+                              <input type="checkbox" name="res" value="e" >
+                              Tema 5<br>
+                            </div>
+                            <div class="col-lg-4">
+                              <div data-dismiss="modal" class="btn btn-success">Crear</div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                          <div class="modal-footer"> <a href="#" data-dismiss="modal" class="btn btn-default">Cerrar</a> </div>
+                        </div>
+                  </div>
+                    </div>
+                <div class="modal fade" id="myModal3">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+                          <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Mensaje</h4>
+                      </div>
+                          <div class="modal-body">
+                       		<div class="alert alert-success" role="alert">Actividad creada con éxito!</div>
+                      </div>
+                          <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+                      </div>
+                        </div>
+                    <!-- /.modal-content --> 
+                  </div>
+                      <!-- /.modal-dialog --> 
+                    </div>
+                <!-- /.modal -->
+              </ul>
+                </nav>
+            <br>
+            <div class="multiple">
+                  <h1 style="font-weight:400;text-transform:uppercase">Multiple-Choice: "Future Simple and Continuous"</h1>
+                  <br>
+                  <h3><strong>1. What ______ John ______ at the moment?</strong></h3>
+                  <div style="margin-left:10px;">
+                <input type="radio" name="res" value="1" checked disabled>
+                will / do<br>
+                <input type="radio" name="res" value="2" disabled>
+                is / doing<br>
+                <input type="radio" name="res" value="3" disabled>
+                are / doing<br>
+                <input type="radio" name="res" value="4" disabled>
+                will/ doing<br>
+                <br>
+              </div>
+                  <center>
+                <a href="#" class="btn btn-danger" role="button">Ver la Actividad Completa</a>
+              </center>
+                  <br/>
+                  <br/>
+                  <h1 style="font-weight:400;text-transform:uppercase; ">Estadísticas de la Actividad</h1>
+                  <div class="col-lg-6">
+                <div id="donutchart" style="width: 500px; height: 300px; margin-left:-70px;"></div>
+              </div>
+                  <div class="col-lg-6"><br/>
+                <br/>
+                <h1 style="font-weight:400;text-transform:uppercase">Tiempo promedio de resolución</h1>
+                <img src="images/time.png" width="300"/></div>
+                </div>
+            <!-- multiple --> 
+            
+          </div>
+              <!-- fix-height-right --> 
+            </div>
+        <div class="tab-pane" id="course">
+              <div class="row">
+            <div class="col-md-3 fix-height" style="overflow-y:scroll; height:450px;	overflow: -moz-scrollbars-vertical;">
+                  <div class="list-group" style="width:100%; text-transform:capitalize"> <a href="#" class="list-group-item "  style="width:100%; margin-top:15px; color:#fff;background-color:#bd1e39;"> <strong>Curso Completo</strong> </a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Alvarez, Julian</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Anauch, Franca</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Ardu, Nicolas</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Balbuena, Franco</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Langer, Eugenia</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Langer, Francisca</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Possetti, Franco</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Brandolini, Julia</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Servigni, Julia</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Oviedo, Julia</strong></a> <a href="#" class="list-group-item"  style="width:100%; color:#333; "><strong>Pavan, Julieta</strong></a> </div>
+                </div>
+            <!-- fix-height -->
+            <div class="col-lg-9 fix-height-right" style="overflow-y:scroll; height:450px;	overflow: -moz-scrollbars-vertical;">
+                  <center>
+                <h1 style="font-size:20px; text-transform:uppercase; font-weight:400; margin-top:20px;">Situación Académica</h1>
+              </center>
+                  <div id="donutchart2" style="width: 900px; height: 250px;"></div>
+                  <div id="chart_div" style="width: 900px; height: 250px;"></div>
+                </div>
+            <!-- fix-height-right --> 
+            
+          </div>
+            </div>
+        <div class="tab-pane" id="program">
+              <div class="squres-fixed">
+            <div style="margin-left:20px;">
+                  <h1 style="font-size:20px; text-transform:uppercase; font-weight:400; margin-top:20px;">Programa Inglés 1º Año "A"</h1>
+                  <div class="row">
+                <div class="col-lg-4"> <br>
+                      <h1 style="font-size:18px; text-transform:uppercase; font-weight:400;">Trimestre 1</h1>
+                      <br>
+                      <input type="checkbox" name="res" value="Tema 1" checked >
+                      Present Simple And Continuous <br>
+                      <input type="checkbox" name="res" value="Tema 2" checked >
+                      Sports And Family Vocabulary <br>
+                      <input type="checkbox" name="res" value="Tema 3" checked >
+                      Future<br>
+                    </div>
+                <div class="col-lg-4"> <br>
+                      <h1 style="font-size:18px; text-transform:uppercase; font-weight:400;">Trimestre 2</h1>
+                      <br>
+                      <input type="checkbox" name="res" value="Tema 4" checked >
+                      Business Vocabulary <br>
+                      <input type="checkbox" name="res" value="Tema 5" >
+                      Present Perfect And Past Simple <br>
+                      <input type="checkbox" name="res" value="Tema 6" >
+                      Comparatives And Superlatives <br>
+                    </div>
+                <div class="col-lg-4"> <br>
+                      <h1 style="font-size:18px; text-transform:uppercase; font-weight:400;">Trimestre 3</h1>
+                      <br>
+                      <input type="checkbox" name="res" value="Tema 7" >
+                      Modal Verbs <br>
+                      <input type="checkbox" name="res" value="Tema 8" >
+                      -ED/-ING Adjectives <br>
+                      <input type="checkbox" name="res" value="Tema 9" >
+                      People Description <br>
+                    </div>
+                <div class="col-lg-12"> <br>
+                      <center>
+                    <div class="progress" style="width:80%;">
+                          <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="">44.44% Completado</span> </div>
+                        </div>
+                  </center>
+                    </div>
+              </div>
+                  <div class="row">
+                <div class="col-lg-12">
+                      <h1 style="font-size:18px; text-transform:uppercase; font-weight:400;">PROPOSITO</h1>
+                      <p>Brindar una herramienta. La actualización y perfeccionamineto del futuro profesional a través de la lectura de bibliografía especializada, tanto la de índole tradicional como la que se publica por Internet, bibliografía que, en una gran proporción se divulga en idioma inglés, cualesquiera sea la nacionalidad de sus autores.</p>
+                      <h1 style="font-size:18px; text-transform:uppercase; font-weight:400;">OBJETIVOS</h1>
+                      <ul style="margin-left:30px;">
+                    <li>Desarrollar la habilidad de la lectura crítica y analítica a través del reconocimiento de la interacción de distintos niveles de significado: conceptual, proposicional, contextual, y pragmática</li>
+                    <li>Comprender diferenes tipos de mensajes en textos técnicos.</li>
+                    <li>Comprender la importancia de la precisión en la decodificación del mensaje en textos técnicos.</li>
+                    <li>Desarrollar la capacidad de relacionar, organizar, sintetizar, y transferir informacióncontenida en textos escritos.</li>
+                    <li>Incrementar el caudal léxico técnico y sub-técnico.</li>
+                  </ul>
+                      <br>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+        </div>
+  </section>
+      
+      <!--/ .page--> 
+      
+    </div>
+
+<!--/ Content   --> 
+
+<script type="text/javascript">
+    $('#Tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script> 
+<script>
+$("#warn-me").click(function() {
+  $(document).trigger("add-alerts", [
+    {
+      'message': "Actividad Creada con Exito.",
+      'priority': 'success'
+    }
+  ]);
+});
+</script> 
+<script src="js/jquery2.js" type="text/javascript"></script> 
+<script src="js/prism.js" type="text/javascript"></script> 
+<script src="js/underscore.js" type="text/javascript"></script> 
+<script src="js/moment.js" type="text/javascript"></script> 
+<script src="js/clndr.js" type="text/javascript"></script> 
+<script src="js/site.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/popup/jquery.magnific-popup.js"></script>
+</body>
+</html>

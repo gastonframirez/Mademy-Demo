@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Colegio San Francisco - Mademy</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<link href="css/login.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="login">
+<br>
+    <center><img src="Resources/images/logo-m.jpg" width="101" height="80"></center>
+    <h1>Iniciar sesion en Colegio San Francisco</h1>
+    <form>
+    <center>
+    <input type="text" name="user" placeholder="Nombre de Usuario" class="user"/><br>
+    <hr class="fancy-line"></hr>
+    <table style="width:92%"><tr><td>
+    <input style="border:none" type="password" name="pass" placeholder="Contraseña" class="pass" /></td><td> <a href="home.html"><div id="enter"></div></a></td></tr></table>
+    <hr class="fancy-line"></hr>
+    </center>
+    </form>
+    
+</div>
+<div class="blur">
+   <img src="Resources/images/back.jpg" alt="banner" style="width: 100%; position: relative; top: 10%; left: 0;" />
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+  $('.login').slideToggle(200);
+};
+</script>
+</body>
+</html>
