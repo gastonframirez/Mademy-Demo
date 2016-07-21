@@ -1,0 +1,114 @@
+{# un dato del portal de datos #}
+
+{% extends extends_from %}
+{% load website_tags %}
+{% block title %}{{ dato.titulo }} {% endblock %}
+
+    {% block slider %}
+          	<div id="banners" data-ride="carousel">
+    	<!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="slide-1 item active"></div>
+        </div>
+    </div>
+    {% endblock %}
+
+{% block content %}
+<section id="main" class="container">
+		<div class="row">
+			<section class="box">
+				<header>
+					<div class="row">
+						<div class="col-md-12 ">
+								<h3 class="tit-funcionarios">{{ dato.titulo }}</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-10 col-sm-9 heading-back">
+								<i><h4 class="subt-funcionarios">{{ dato.descripcion }}</h4></i>
+						</div>
+						<div class="col-md-2 col-sm-3 subt-funcionarios volver" align="right">
+							<a href="/"> <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Volver</a>
+						</div>
+					</div>
+				</header>			
+				
+				
+				<div class="row">
+                    <div class="col-md-12">
+                        <div class="heading-reparticion version-datos" id="heading-section">
+                            <h3 class="subtitle-version-datos">{{ dato.categoria.nombre }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+					<div class="col-md-12 text-funcionarios">
+						{{ dato.html|safe }} <!-- Esto es el HTML que se pone en el Admin de Django-->
+					</div>
+				</div>
+				
+				<div class="row">
+					{% for ver in dato.versiondato_set.all reversed %}
+					<div class="col-sm-12 col-md-6">
+						<section class="panel panel-default">
+							<div class="panel-body datos">
+								<div class="row">
+									<div class="col-md-9 col-sm-10">
+										<div class="row">
+										<div class="col-md-12"><h3 class="title-version-datos">{{ ver.html|safe }}</h3></div>
+										<div class="col-md-12">
+										{% for fuente in ver.fuentes.all %}
+							           		<i>{{ fuente.nombre }}</i>
+							            {% endfor %}
+										</div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-2 col-xs-4 nopadding">
+										<div class="date">
+											<a class="date_tooltip" role="button" data-toggle="tooltip" data-placement="right" title="Hora: {{ver.fecha|date:'H:i:s'}}"><p>{{ver.fecha|date:"d"}} <span>{{ver.fecha|date:"M 'y"}}</span></p></a>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							
+							<div class="panel-footer downloads">
+								<div class="row">
+								{% for recurso in ver.recurso_set.all %}
+									{% if recurso.tipo.tipo == 10 %}
+										<div class="col-md-{% widthratio 12 ver.recurso_set.all.count 1 %} col-sm-{% widthratio 12 ver.recurso_set.all.count 1 %} col-xs-12 file file-{{recurso.archivo.archivo_local.name|get_ext}}">
+<!-- 										{{recurso.archivo.archivo_local.name|get_ext}} -->
+										<center><a href="/media/{{recurso.archivo.archivo_local}}" target="_blank"><i class="icon-file-{{recurso.archivo.archivo_local.name|get_ext}}-o" aria-hidden="true"></i> Descargar</a></center>
+										</div>
+									{% else %}
+										{% if recurso.tipo.tipo == 20 %}
+											{{ recurso.archivo.url_externa }}
+										{% else %}
+											{% if recurso.tipo.tipo == 30 %}
+												{{ recurso.archivo.url_externa }}
+											{% else %}
+												{{ recurso.archivo.url_externa }}	
+											{% endif %}
+										{% endif %}
+									{% endif %}
+								{% endfor %} 
+</div>
+							 </div>
+						</section>
+					</div>
+				  	{% endfor %}
+				</div>
+				<div class="volver-margin"></div>
+				<div class="row nopadding">
+					<div class="col-md-12 col-xs-12 volver-footer bot-m volver volver-margin">
+						<a href="/"> <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Volver</a>
+					</div>
+				</div>
+				
+			</section>
+		</div>
+</section>
+<script src="/static/website/{{website.template}}/js/header.js"></script>
+
+
+{% endblock %}
